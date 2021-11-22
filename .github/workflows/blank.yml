@@ -28,6 +28,9 @@ jobs:
         with:
           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -43,3 +46,11 @@ jobs:
       - name: run test python script
         run: python test-py.py
       
+      # run note test
+      - name: run node script test
+        run: | 
+          node -v
+          npm -v
+          npm init
+        
+        
