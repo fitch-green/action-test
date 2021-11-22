@@ -67,7 +67,7 @@ jobs:
       - name: Build image
         #run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
         run: |
-          IMAGE_NAME = testimage
+          IMAGE_NAME=testimage
           docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log in to registry
