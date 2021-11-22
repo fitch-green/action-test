@@ -51,6 +51,7 @@ jobs:
         run: | 
           node -v
           npm -v
-          npm init
+          npm ci
+          npm test
         
         
